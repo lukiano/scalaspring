@@ -11,8 +11,8 @@ public class Main {
         System.out.println("Starting...");
         AnnotationConfigApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(SpringConfiguration.class);
-        applicationContext.scan("com.lucho.service");
 
+        //These are not Spring beans as they live outside the Application Context.
         MyRichObject myRichObject = new MyRichObject();
         MyGroovyObject myGroovyObject = new MyGroovyObject();
         MyScalaObject myScalaObject = new MyScalaObject();
